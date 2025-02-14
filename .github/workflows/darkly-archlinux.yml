@@ -47,3 +47,7 @@ jobs:
         run: |
           cat ${{ env.PACKAGER_UTILS_PATH }}/output/AUR/darkly/PKGBUILD
           sudo -u builduser bash -c 'cd packager-utils/output/AUR/darkly; makepkg -s'
+      - name: Build binary-package
+        run: |
+          cat ${{ env.PACKAGER_UTILS_PATH }}/output/AUR/darkly-bin/PKGBUILD
+          sudo -u builduser bash -c 'cd packager-utils/output/AUR/darkly-bin; makepkg -s'
